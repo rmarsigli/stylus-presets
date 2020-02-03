@@ -1,0 +1,68 @@
+$extra = {
+	directions: {
+		l: 'left',
+		t: 'top',
+		r: 'right',
+		b: 'bottom'
+	},
+	directionsClasses: {
+		m: 'margin',
+		p: 'padding'
+	},
+	backgrounds: {
+		transparent: 'transparent',
+		white: 'white',
+		black: 'black'
+	}
+}
+
+// Sizes
+for num in 0...5
+	// Directions for padding and margin
+	for short, class in $extra.directionsClasses
+		.{short}-{num}
+			if num == 0
+				{class}: 0 !important
+			else
+				{class}: (1rem + (num * .25)) !important
+	for key, to in $extra.directions
+		for short, class in $extra.directionsClasses
+			.{short}{key}-{num}
+				if num == 0
+					{class}-{to}: 0 !important
+				else
+					{class}-{to}: (1rem + (num * .25)) !important
+	// Box-shadows
+	if num == 0
+		.bs-0
+			box-shadow(none)
+	else
+		.bs-{num}
+			box-shadow(0 (1px * num) (3px * num) transparentify(black, 0.25)) !important
+
+// Backround
+for key, bg in $extra.backgrounds
+	.bg-{key}
+		background: bg !important
+		
+for key, to in $extra.directions
+	for short, class in $extra.directionsClasses
+		.{short}{key}-default
+			{class}-{to}: $global-size !important
+
+.block
+	section-row()
+.lower
+	text-transform: none
+.upper
+	text-transform: uppercase
+	
+.fr
+	float: right
+.fl
+	float: left
+	
+.bb
+	border-bottom: 1px solid $black-10
+.bt
+	border-top: 1px solid $black-10

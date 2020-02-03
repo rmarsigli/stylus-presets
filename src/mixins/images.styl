@@ -1,0 +1,5 @@
+grayscale($amount)
+	filter gray
+	filter "grayscale(%s)" % percentage($amount)
+	-webkit-filter: "grayscale(%s)" % $amount
+	-moz-filter: "grayscale(%s)" % percentage($amount)

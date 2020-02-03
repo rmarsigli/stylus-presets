@@ -1,0 +1,16 @@
+{
+  "name": "stylus-presets",
+  "version": "1.0.0",
+  "description": "My personal stylus presets for every web project",
+  "main": "src/index.styl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stylus",
+    "css",
+    "pre-processor"
+  ],
+  "author": "Rafhael Marsigli <rafhael@laranja.info>",
+  "license": "MIT"
+}

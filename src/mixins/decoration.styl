@@ -1,0 +1,79 @@
+background-size(value)
+	-webkit-background-size: value
+	-moz-background-size: value
+	-o-background-size: value
+	background-size: value
+
+border-radius(value)
+	-webkit-border-radius: value
+	-moz-border-radius: value
+	border-radius: value
+	-webkit-background-clip: padding-box
+	-moz-background-clip: padding
+	background-clip: padding-box
+
+border-top-left-radius(value)
+	-webkit-border-top-left-radius: value
+	-moz-border-radius-topleft: value
+	-ms-border-top-left-radius: value
+	-o-border-top-left-radius: value
+	border-top-left-radius: value
+
+border-top-right-radius(value)
+	-webkit-border-top-right-radius: value
+	-moz-border-radius-topright: value
+	-ms-border-top-right-radius: value
+	-o-border-top-right-radius: value
+	border-top-right-radius: value
+
+border-bottom-left-radius(value)
+	-webkit-border-bottom-left-radius: value
+	-moz-border-radius-bottomleft: value
+	-ms-border-bottom-left-radius: value
+	-o-border-bottom-left-radius: value
+	border-bottom-left-radius: value
+
+border-bottom-right-radius(value) 
+	-webkit-border-bottom-right-radius: value
+	-moz-border-radius-bottomright: value
+	-ms-border-bottom-right-radius: value
+	-o-border-bottom-right-radius: value
+	border-bottom-right-radius: value
+
+box-shadow(value)
+	-webkit-box-shadow: value
+	-moz-box-shadow: value
+	box-shadow: value
+	
+text-shadow(value)
+	text-shadow: value
+
+gradient(origin, colors...)
+	fallback = colors[1][0]
+
+	colors = join(', ', colors)
+	colors = unquote(colors)
+	origin = unquote(origin)
+
+	background-color: fallback
+	background-image: -webkit-linear-gradient(origin, colors)
+	background-image: -moz-linear-gradient(origin, colors)
+	background-image: -ms-linear-gradient(origin, colors)
+	background-image: -o-linear-gradient(origin, colors) 
+	background-image: linear-gradient(origin, colors)
+
+gradient-radial(origin, colors...)
+	fallback = colors[1][0]
+
+	colors = join(', ', colors)
+	colors = unquote(colors)
+
+	background-color: fallback
+	background-image: -webkit-radial-gradient(origin, colors)
+	background-image: -moz-radial-gradient(origin, colors)
+	background-image: -ms-radial-gradient(origin, colors)
+	background-image: -o-radial-gradient(origin, colors)
+	background-image: radial-gradient(origin, colors)
+
+blackfy(percentage = 100)
+	return darken(#fff, (percentage)%)
