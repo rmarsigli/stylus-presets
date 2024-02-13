@@ -68,4 +68,4 @@ Aqui encontra-se as pré-definições que sempre incluo na maioria dos sites que
 
 ## Contribua!
 
-Envie-me um e-mail: [rafhael@laranja.info](malito:rafhael@laranja.info) ou faça seu Pull Request!
+Envie-me um e-mail: [oi@rafhael.com.br](mailto:oi@rafhael.com.br) ou faça seu `Pull Request`!
